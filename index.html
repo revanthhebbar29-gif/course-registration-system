@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>StudentRegistration System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎓 Student Registration System</h1>
+        <p>Manage Students, Courses and Enrollments Efficiently</p>
+    </header>
+
+    <section class="hero">
+
+        <h2>Welcome to Student Portal</h2>
+
+        <p>
+            Register students, manage courses,
+            enroll students and monitor academic records.
+        </p>
+
+    </section>
+
+    <!-- ===== ACTION CARDS ===== -->
+    <div class="cards">
+
+        <a href="/register" class="card">
+            <h3>➕ Register Student</h3>
+        </a>
+
+        <a href="/students" class="card">
+            <h3>📋 View Students</h3>
+        </a>
+
+        <a href="/courses" class="card">
+            <h3>📚 Courses</h3>
+        </a>
+
+        <a href="/enrollment" class="card">
+            <h3>📝 Enrollment</h3>
+        </a>
+
+        <a href="/dashboard" class="card">
+            <h3>📊 Dashboard</h3>
+        </a>
+
+    </div>
+
+    <!-- ===== STATS SECTION ===== -->
+    <section class="dashboard">
+
+        <div class="box">
+            <h2>20+</h2>
+            <p>Students</p>
+        </div>
+
+        <div class="box">
+            <h2>10+</h2>
+            <p>Courses</p>
+        </div>
+
+        <div class="box">
+            <h2>5+</h2>
+            <p>Faculty</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>DBMS Mini Project </p>
+    </footer>
+
+</body>
+</html>

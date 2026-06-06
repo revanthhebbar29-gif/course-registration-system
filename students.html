@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Records</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🎓 Student Records</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/register">Register</a>
+        <a href="/students">View Students</a>
+        <a href="/courses">Courses</a>
+        <a href="/enrollment">Enrollment</a>
+        <a href="/enrollment_view">Enrollment View</a>
+        <a href="/dashboard">Dashboard</a>
+    </nav>
+</header>
+
+<div class="table-container">
+    <h2>Registered Students</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Semester</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for s in students %}
+        <tr>
+            <td>{{ s[0] }}</td>
+            <td>{{ s[1] }}</td>
+            <td>{{ s[2] }}</td>
+            <td>{{ s[3] }}</td>
+            <td>{{ s[4] }}</td>
+
+        <td>
+            <a href="/edit_student/{{ s[0] }}" class="btn-edit">✏️ Edit</a>
+
+            <a href="/delete_student/{{ s[0] }}" class="btn-delete"
+                onclick="return confirm('Are you sure?')">
+                🗑 Delete
+            </a>
+        </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+
+<body>
+
+<header>
+    <h1>🎓 Student Registration</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/students">View Students</a>
+        <a href="/courses">Courses</a>
+        <a href="/enrollment">Enrollment</a>
+        <a href="/dashboard">Dashboard</a>
+    </nav>
+</header>
+
+<div class="form-container">
+
+    <form method="POST">
+
+        <h2>Register New Student</h2>
+
+        <input type="text" name="name" placeholder="Enter Full Name" required>
+
+        <input type="email" name="email" placeholder="Enter Email Address" required>
+
+        <input type="text" name="department" placeholder="Enter Department (CSE/ECE/ISE/ME)" required>
+
+        <input type="number" name="semester" placeholder="Enter Semester (1-8)" required>
+
+        <button type="submit">➕ Register Student</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

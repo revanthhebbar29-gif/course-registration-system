@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrollment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>Course Enrollment</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/students">Students</a>
+        <a href="/courses">Courses</a>
+        <a href="/enrollment">Enrollment</a>
+        <a href="/dashboard">Dashboard</a>
+    </nav>
+</header>
+
+<div class="form-container">
+
+    <form method="POST">
+
+        <label>Student</label>
+        <select name="student_id" required>
+            {% for s in students %}
+                <option value="{{ s[0] }}">{{ s[1] }}</option>
+            {% endfor %}
+        </select>
+
+        <br><br>
+
+        <label>Course</label>
+        <select name="course_id" required>
+            {% for c in courses %}
+                <option value="{{ c[0] }}">{{ c[1] }}</option>
+            {% endfor %}
+        </select>
+
+        <br><br>
+
+        <button type="submit">Enroll Student</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

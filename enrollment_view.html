@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrollment View</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">📝 Enrollment Records</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/register">Register</a>
+        <a href="/students">Students</a>
+        <a href="/courses">Courses</a>
+        <a href="/enrollment">Enrollment</a>
+        <a href="/enrollment_view">Enrollment View</a>
+        <a href="/dashboard">Dashboard</a>
+    </nav>
+</header>
+
+<table border="1">
+    <tr>
+        <th>Student Name</th>
+        <th>Course Name</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
